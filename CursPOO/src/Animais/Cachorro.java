@@ -21,15 +21,23 @@ public class Cachorro {
     }
 
     public  String interagir (String acao){
-        if (acao.equals("carinho")) {
-            this.estadoDeEspirito = "Feliz! 😍";
+
+        switch (acao){
+            case "carinho":
+                this.estadoDeEspirito = "Feliz! 😍";
+            break;
+
+            case "dormir":
+                this.estadoDeEspirito = "Bravo! 😡";
+            break;
+
+            case "gritar":
+                this.estadoDeEspirito = "triste! 🥺";
+            break;
+
+            default:
+                this.estadoDeEspirito = "Neutro! 🙄";
         }
-        else if (acao.equals("dormir")){
-            this.estadoDeEspirito = "Bravo! 😡";
-        }
-        else {
-            this.estadoDeEspirito = "Neutro! 🙄";
-        }
-        return estadoDeEspirito;
+        return this.estadoDeEspirito;
     }
 }
